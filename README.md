@@ -2,7 +2,8 @@
 
 # Steps to run this code on local machine
 
-=> step 1: run this code in your vs code terminal <code>git clone https://github.com/bot5294/http_req_tech_workshop.git</code><br>
+Run this code in your vs code terminal 
+=> step 1: <code>git clone https://github.com/bot5294/http_req_tech_workshop.git</code><br>
 => step 2: <code>cd http_req_tech_workshop</code><br>
 => step 3: <code>npm i</code><br>
 => step 4: <code>cd server</code><br>
