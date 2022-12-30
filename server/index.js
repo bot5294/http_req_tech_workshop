@@ -2,9 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 app.use(cors());
+
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-let nameArray = ["Ahmed","Disha","Sri Ganesh","Soubhik","Chavvi","Krishna"]
+let nameArray = []
 
 function getRandomName (){
     let size = nameArray.length;//6
@@ -50,85 +52,30 @@ app.get("/allNames",(req,res)=>{
     })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// app.get('/*', (request, response) => {
-//     return response.status(401).json({
-//         message:"He He Dhappa !!! (You are on the wrong route)"
-//     })
-// })
-
-
-
-
-
+// DeleteByIndex
+app.delete("/deleteByIndex/:index",(req,res)=>{
+    let index = parseInt(req.params.index);
+    let size = nameArray.length;
+    let delteName;
+    if(index<size && index>=0){
+        delteName = nameArray[index];
+        nameArray.splice(index,1);
+    }
+    return res.status(200).json({
+        message:`${delteName} name removed successfully`
+    })
+})
+
+// put
+app.put("/editName",(req,res)=>{
+    let {index,name} = req.body;
+    console.log(name);
+    let oldName = nameArray[index];
+    nameArray[index]=name;
+    return res.status(200).json({
+        message: `${oldName} -> ${nameArray[index]}`
+    })
+})
 
 
 
