@@ -35,7 +35,45 @@ async function fetchByIndex(){
     if(result){
         console.log(result);
         document.getElementById("name").innerText = result.name;
+        document.getElementById("edit-input").value = result.name;
     }else{
         alert("issue at fetchByIndex")
+    }
+}
+
+// deleteByIndex
+async function deleteByIndex(){
+    let input = document.getElementById("del-index-input");
+    let index = input.value;
+    let result = await fetch(`http://localhost:5294/deleteByIndex/${index}`,{
+        method:'DELETE',
+    });
+    result = await result.json();
+    if(result){
+        document.getElementById("name").innerText=result.message;
+    }else{
+        alert("issue at deleteByIndex")
+    }
+}
+
+// editName
+async function editName(){
+    let currentName = document.getElementById("edit-input").value;
+    let input = document.getElementById("index-input");
+    let index = input.value;
+    let result = await fetch(`http://localhost:5294/editName`,
+    {
+        headers:{
+        "Content-Type": "application/json",
+        },
+        method:'PUT',
+        body:JSON.stringify({"name":currentName,"index":index})
+    });
+    result= await result.json();
+    if(result){
+        console.log(result);
+        document.getElementById("name").innerText = result.message;
+    }else{
+        alert("issue at editName")
     }
 }
