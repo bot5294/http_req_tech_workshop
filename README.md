@@ -20,11 +20,11 @@ Run this code in your vs code terminal <br>
 # Need more help ?
 
 Watch these workshop recordings which covers the above code(this repo's code)
-
-# Workshp Title : HTTP Requests (GET vs POST) with practical demonstration.
-
-# Workshop Recording : https://drive.google.com/file/d/1_Y2-fYzppjI_3IuNrR24QQbIsjz6TAC1/view?usp=sharing
-
-# Workshop Title : HTTP Requests (PUT,PATCH,DELETE) with POSTMAN Demonstration
-
-# Workshop Recording : https://drive.google.com/file/d/1XLNkb3jBFLE5Ixr1QYlREFWTTgXzqjop/view?usp=sharing
+<br>
+Workshp Title : HTTP Requests (GET vs POST) with practical demonstration.
+<br>
+Workshop Recording : https://drive.google.com/file/d/1_Y2-fYzppjI_3IuNrR24QQbIsjz6TAC1/view?usp=sharing
+<br>
+Workshop Title : HTTP Requests (PUT,PATCH,DELETE) with POSTMAN Demonstration
+<br>
+Workshop Recording : https://drive.google.com/file/d/1XLNkb3jBFLE5Ixr1QYlREFWTTgXzqjop/view?usp=sharing
